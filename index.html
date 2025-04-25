@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CollegeTips Photo Gallery</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <!-- Google Font: Bebas Neue -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 🌟 Header -->
+  <header class="main-header">
+    <h1 class="gallery-title">CollegeTips Gallery</h1>
+    <div class="gif-container">
+      <img src="https://cdn.dribbble.com/userupload/42353364/file/original-5a8a7909ccfa4474641bb41a871d8b08.gif" alt="CollegeTips GIF" class="header-gif"/>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <!-- Featured Video -->
+    <section class="video-section">
+      <h2>🎬 Featured Video</h2>
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/2ska-JPZ8ns?si=xPtsbFT5lkLArZPj" 
+          title="Featured Video" 
+          frameborder="0" 
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+      <button data-category="all">All</button>
+      <button data-category="team">Team Vibes 🤝</button>
+      <button data-category="campaigns">Creative Campaigns 🎨</button>
+      <button data-category="fun">Work Hard, Play Hard 🥳</button>
+      <button data-category="bts">Behind-The-Scenes 🎥</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-container">
+      <div class="gallery-item team" style="background-image: url('./images/teamvibes1.jpg');"></div>
+      <div class="gallery-item team" style="background-image: url('./images/teamvibes2.jpg');"></div>
+      <div class="gallery-item campaigns" style="background-image: url('./images/creative2.jpg');"></div>
+      <div class="gallery-item campaigns" style="background-image: url('./images/creative1.jpg');"></div>
+      <div class="gallery-item fun" style="background-image: url('./images/fun1.jpg');"></div>
+      <div class="gallery-item fun" style="background-image: url('./images/fun2.jpg');"></div>
+      <div class="gallery-item bts" style="background-image: url('./images/bts2.jpg');"></div>
+      <div class="gallery-item bts" style="background-image: url('./images/bts1.jpg');"></div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <img src="" alt="Enlarged Image" />
+    </div>
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll('[data-category]');
+    const items = document.querySelectorAll('.gallery-item');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+        items.forEach(item => {
+          item.style.display = category === 'all' || item.classList.contains(category)
+            ? 'block'
+            : 'none';
+        });
+      });
+    });
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        const imageUrl = item.style.backgroundImage.slice(5, -2);
+        lightboxImg.src = imageUrl;
+        lightbox.classList.add('show');
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('show');
+    });
+  </script>
+</body>
+</html>

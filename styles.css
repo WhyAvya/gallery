@@ -1,0 +1,675 @@
+/* Reset and body styling */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { */
+  /* background-color: #1f2662; Dark blue background */
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+} */
+
+/* Gallery Grid */
+/* .gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 40px;
+} */
+
+/* Each image box */
+/* .gallery-item {
+  width: 220px;
+  height: 140px;
+  border-radius: 20px;
+  background-color: #ccc; /* Fallback color */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* box-shadow: 0 8px 16px rgba(4, 4, 4, 0.3); */
+  /* transition: transform 0.3s ease; */
+/* } */ 
+
+/* .gallery-item:hover {
+  transform: scale(1.05);
+} */
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #25344F; /* Space Cadet */
+    font-family: 'Segoe UI', sans-serif;
+    color: #D5B893; /* Tan */
+    padding: 0;
+  }
+  
+  /* 🌟 Header */
+  .main-header {
+    background-color: #633024; /* Caput Mortuum */
+    color: #D5B893;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  
+  .main-header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  
+  /* Layout Container */
+  main {
+    max-width: 1200px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  /* 🎬 Video Section */
+  .video-section {
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .video-section h2 {
+    font-size: 1.6rem;
+    color: #FFDBAC;
+    margin-bottom: 15px;
+  }
+  
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    padding-top: 56.25%;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  }
+  
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* 🔘 Filter Buttons */
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  
+  .filter-buttons button {
+    background-color: #617891; /* Slate Gray */
+    color: #fff;
+    border: 2px solid #D5B893;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .filter-buttons button:hover {
+    background-color: #D5B893;
+    color: #25344F;
+  }
+  
+  /* 🖼️ Gallery Grid */
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    width: 100%;
+    justify-items: center;
+  }
+  
+  /* 📷 Gallery Items */
+  .gallery-item {
+    width: 100%;
+    max-width: 220px;
+    height: 140px;
+    border-radius: 20px;
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0.9;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  
+  /* 💡 Lightbox */
+  .lightbox {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 999;
+  }
+  
+  .lightbox.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .lightbox img:hover {
+    transform: scale(1.02);
+  }
+  
+  /* 📱 Responsive Tweaks */
+  @media (max-width: 600px) {
+    .main-header h1 {
+      font-size: 1.6rem;
+    }
+  
+    .video-section h2 {
+      font-size: 1.2rem;
+    }
+  
+    .filter-buttons button {
+      padding: 8px 14px;
+      font-size: 0.9rem;
+    }
+  
+    .gallery-item {
+      max-width: 100%;
+    }
+  }
+
+  
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1f2662;
+    color: #fff;
+  }
+  
+  .main-header {
+    display: flex;
+    justify-content: center;  /* Center the content horizontally */
+    align-items: center;      /* Align the items vertically */
+    gap: 15px;                /* Add space between the text and the GIF */
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin: 0; /* Remove margin around the h1 */
+  }
+  
+  .gif-container {
+    display: inline-block; /* Keeps the gif inline with the text */
+  }
+  
+  .header-gif {
+    width: 80px;  /* Set the width to make the GIF square */
+    height: 80px; /* Set the height equal to the width */
+    object-fit: cover; /* Ensure the GIF maintains its aspect ratio within the square */
+  }
+
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1f2662;
+    color: #fff;
+  }
+  
+  .main-header {
+    display: flex;
+    justify-content: center;  /* Center the content horizontally */
+    align-items: center;      /* Align the items vertically */
+    gap: 15px;                /* Add space between the text and the GIF */
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin: 0; /* Remove margin around the h1 */
+  }
+  
+  .gif-container {
+    display: inline-block; /* Keeps the gif inline with the text */
+  }
+  
+  .header-gif {
+    width: 80px;  /* Set the width to make the GIF square */
+    height: 80px; /* Set the height equal to the width */
+    object-fit: cover; /* Ensure the GIF maintains its aspect ratio within the square */
+    border-radius: 30%; /* Make the GIF round */
+  }
+  
+
+
+  /* General Reset */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D5B893; /* TAN background */
+    color: #633024; /* CAPUT MORTUUM text color */
+  }
+  
+  .main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #633024; /* CAPUT MORTUUM background for header */
+    color: white;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .gif-container {
+    display: inline-block;
+  }
+  
+  .header-gif {
+    width: 80px;  /* Size of the gif */
+    height: 80px; /* Size of the gif */
+    object-fit: cover; 
+    border-radius: 50%; /* Round GIF */
+  }
+  
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .filter-buttons button {
+    background-color: #633024; /* CAPUT MORTUUM button background */
+    color: white;
+    border: 2px solid #D5B893; /* TAN border color */
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-buttons button:hover {
+    background-color: #D5B893; /* TAN hover effect */
+    color: #633024; /* CAPUT MORTUUM text color on hover */
+  }
+  
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  .gallery-item {
+    width: 100%;
+    max-width: 220px;
+    height: 140px;
+    border-radius: 20px;
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0.9;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 999;
+  }
+  
+  .lightbox.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .lightbox img:hover {
+    transform: scale(1.02);
+  }
+  
+  @media (max-width: 600px) {
+    .gallery-title {
+      font-size: 1.5rem;
+    }
+  
+    .filter-buttons button {
+      padding: 8px 14px;
+      font-size: 0.9rem;
+    }
+  
+    .gallery-item {
+      max-width: 100%;
+    }
+  }
+
+  
+
+  /* General Reset */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D5B893; /* TAN background */
+    color: #633024; /* CAPUT MORTUUM text color */
+  }
+  
+  .main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #633024; /* CAPUT MORTUUM background for header */
+    color: white;
+  }
+  
+  h1.gallery-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem; /* Bold and impactful font size */
+    letter-spacing: 3px;
+    margin: 0;
+  }
+  
+  .gif-container {
+    display: inline-block;
+  }
+  
+  .header-gif {
+    width: 80px;  /* Size of the gif */
+    height: 80px; /* Size of the gif */
+    object-fit: cover; 
+    border-radius: 50%; /* Round GIF */
+  }
+  
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .filter-buttons button {
+    background-color: #633024; /* CAPUT MORTUUM button background */
+    color: white;
+    border: 2px solid #D5B893; /* TAN border color */
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-buttons button:hover {
+    background-color: #D5B893; /* TAN hover effect */
+    color: #633024; /* CAPUT MORTUUM text color on hover */
+  }
+  
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  .gallery-item {
+    width: 100%;
+    max-width: 220px;
+    height: 140px;
+    border-radius: 20px;
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0.9;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 999;
+  }
+  
+  .lightbox.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .lightbox img:hover {
+    transform: scale(1.02);
+  }
+  
+  @media (max-width: 600px) {
+    .gallery-title {
+      font-size: 1.5rem;
+    }
+  
+    .filter-buttons button {
+      padding: 8px 14px;
+      font-size: 0.9rem;
+    }
+  
+    .gallery-item {
+      max-width: 100%;
+    }
+  }
+  
+  
+
+
+
+
+
+
+
+  /* General Reset */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D5B893; /* TAN background */
+    color: #633024; /* CAPUT MORTUUM text color */
+  }
+  
+  /* Featured Video Section */
+  .video-section {
+    background-color: #fff; /* White background for video section */
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .video-wrapper {
+    max-width: 100%; /* Makes the video responsive */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 15px; /* Rounded corners */
+    background-color: #633024; /* CAPUT MORTUUM background */
+  }
+  
+  .video-wrapper iframe {
+    width: 100%; /* Make the iframe responsive */
+    height: 450px; /* Increase the height for a bigger video */
+    border: none;
+    border-radius: 15px; /* Rounded corners for iframe */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow for aesthetics */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .video-wrapper iframe:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+  }
+  
+  /* Optional: Styling for other sections */
+  h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: #633024; /* CAPUT MORTUUM color */
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .video-wrapper iframe {
+      height: 300px; /* Smaller height on mobile */
+    }
+  }
+  
+
+
+
+  .video-section {
+    background-color: #fff; /* White background for video section */
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 1.5rem; /* Larger font size for the section */
+  }
+  
+  .video-section h2 {
+    font-family: 'Bebas Neue', sans-serif; /* Choose a bold and aesthetic font */
+    font-size: 3rem; /* Make the heading significantly larger */
+    color: #633024; /* CAPUT MORTUUM text color */
+    margin-bottom: 20px;
+  }
+  
+  .video-section p {
+    font-size: 1.25rem; /* Larger text for paragraph or description */
+    color: #6F4D3B; /* COFFEE color for the text */
+  }
+  
+
+
+
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Maintains aspect ratio (16:9) */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: #633024; /* CAPUT MORTUUM background */
+  }
+  
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  /* Ensures the iframe takes the full width */
+    height: 100%; /* Ensures the iframe takes the full height */
+    border: none;
+    border-radius: 15px; /* Rounded corners for iframe */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow for aesthetics */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .video-wrapper iframe:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .video-wrapper iframe {
+      height: 250px; /* Adjusted smaller height on mobile */
+    }
+  }
+  
